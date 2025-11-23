@@ -58,10 +58,9 @@ nav ul {
     font-size: 18px;
 }
 
-nav ul li:active {
-    background: linear-gradient(45deg, #6a5cff, #ca25e4, #df1ba1);
-    -webkit-background-clip: text;
-    color: transparent;
+nav ul li a:hover {
+    color: #ca25e4;
+    transform: scale(1.1);
 }
 
 header .header-actions .btn-header {
@@ -84,6 +83,15 @@ h1 {
     text-transform: uppercase;
     letter-spacing: 0.04em;
     line-height: 111%;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 111%;
+    color: #FFFFFF;
 }
 
 h1 span {
@@ -179,3 +187,42 @@ p {
     font-weight: 400;
     text-transform: capitalize;
 }
+
+.main-2 {
+    background:linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 10%);
+    backdrop-filter: blur(50px);
+    border-radius: 1px solid rgb(255, 148, 255);
+    position: relative;
+    width: 100%;
+    height: 90px;
+    margin-top: 47px;
+}
+
+.section-1 .scroll-thing {
+    padding: 27px 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 52px;
+    width: max-content;
+    position: absolute;
+
+    animation: scrolling 60s linear infinite;
+    animation-range: cover;
+}
+@keyframes scrolling {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.section-1 .scroll-thing div {
+    display: flex;
+    align-items: center;
+    width: max-content;
+    gap: 18px;
+}
+
