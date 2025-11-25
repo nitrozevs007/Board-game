@@ -35,6 +35,7 @@ button {
 }
 
 header {
+    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,21 +52,31 @@ header .logo {
 }
 
 nav ul {
+    z-index: 2;
     display: flex;
     text-transform: uppercase;
+    transform-origin: center;
     gap: 40px;
     font-weight: 400;
     font-size: 18px;
 }
 
-nav ul li a:hover {
+.nav-links li a:hover {
     color: #ca25e4;
     transform: scale(1.1);
+    cursor: pointer;
+    font-weight: 800;
 }
 
 header .header-actions .btn-header {
     position: relative;
 }
+
+header .header-actions .btn-header:hover .shop-btn,
+header .header-actions .btn-header:hover .notif {
+    transform: scale(1.1);
+}
+
 header .header-actions .btn-header .notif {
     position: absolute;
     top: 0.7px;
@@ -144,6 +155,14 @@ p {
     transform: skew(-15deg);
 }
 
+.hero .content .btns button:hover {
+    transform: scale(1.01) skew(-15deg);
+}
+
+.hero .content .btns button:active {
+    transform: scale(0.99) skew(-15deg);
+}
+
 .hero .content .btns b {
     transform: skew(12deg);
     
@@ -188,6 +207,17 @@ p {
     text-transform: capitalize;
 }
 
+.hero .content .infos div h3:hover {
+    color: transparent;
+    background: linear-gradient(45deg, #6a5cff, #ca25e4, #df1ba1);
+    -webkit-background-clip: text;
+}
+.hero .content .infos div p:hover {
+    color: transparent;
+    background: linear-gradient(45deg, #6a5cff, #ca25e4, #df1ba1);
+    -webkit-background-clip: text;
+}
+
 .main-2 {
     background:linear-gradient(45deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 10%);
     backdrop-filter: blur(50px);
@@ -195,7 +225,7 @@ p {
     position: relative;
     width: 100%;
     height: 90px;
-    margin-top: 47px;
+    margin-top: 79px;
 }
 
 .section-1 .scroll-thing {
@@ -226,3 +256,10 @@ p {
     gap: 18px;
 }
 
+
+
+
+
+.hero-img {
+    pointer-events: none;
+}
