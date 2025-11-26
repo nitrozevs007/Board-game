@@ -192,6 +192,7 @@ p {
     display: flex;
     align-items: center;
     flex-direction: column;
+    cursor: default;
 }
 
 .hero .content .infos div h3 {
@@ -256,9 +257,9 @@ p {
     gap: 18px;
 }
 
-
-
-
+.section-1 .scroll-thing div:hover {
+    transform: scale(1.03);
+}
 
 .hero-img {
     pointer-events: none;
